@@ -175,6 +175,7 @@ class CreateSubscriptionServiceProvider extends BaseProvider {
     setplanCurrency = GetAnotherWeizlePremium.planCurrency;
     setpremiumPlanId = GetAnotherWeizlePremium.premiumPlanId;
     var userBox = await Hive.openBox(weisleUserBox);
+    // added  ?? userBox.get(rweisleUserName);
     String accountIDD =
         userBox.get(weisleUserName) ?? userBox.get(rweisleUserName);
     String setupIDD = userBox.get(weislesetUpId);
